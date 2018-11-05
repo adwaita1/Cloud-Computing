@@ -1,0 +1,13 @@
+#Step to configure aws s3
+
+$ sudo apt-get install python-pip
+
+$ sudo pip install awscli
+
+$ sudo pip install --upgrade awscli
+
+$ aws configure
+AWS Access Key ID [None]: <your_key>
+AWS Secret Access Key [None]: <your-key>
+Default region name [None]: <region-name>
+Default output format [None]: json

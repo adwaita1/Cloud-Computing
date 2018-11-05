@@ -1,0 +1,211 @@
+student@B04L03100:~$ python create_bucket.py 
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+1
+Enter bucket name:
+awstrialbucket2
+Enter region name:
+us-west-2
+command :  aws s3api create-bucket --bucket awstrialbucket2 --region us-west-2 
+using split() :  ['aws', 's3api', 'create-bucket', '--bucket', 'awstrialbucket2', '--region', 'us-west-2']
+{
+    "Location": "/awstrialbucket2"
+}
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+6
+command :  aws s3 ls
+2016-03-24 17:18:59 aws_ss
+2016-03-18 15:48:20 awsexamtrial2
+2016-03-21 14:32:44 awspracticebucket
+2016-03-17 15:39:55 awss3examtrial
+2016-03-23 10:54:26 awss3trial4
+2016-03-25 09:36:42 awstrialbucket2
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+4
+Enter File path: 'From local to s3 storage'
+/home/student/Desktop/Hello.txt
+Enter Destination path: 'eg. /<bucket_name>/<folder_name>/...'
+/awstrialbucket2
+command :  aws s3 cp /home/student/Desktop/Hello.txt s3://awstrialbucket2
+upload: Desktop/Hello.txt to s3://awstrialbucket2/Hello.txt
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+7
+Enter the bucket name:
+awstrialbucket2
+command :  aws s3 ls awstrialbucket2
+2016-03-25 09:38:50         25 Hello.txt
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+5
+Enter File path to be deleted: 'eg. /<bucket_name>/<folder_name>/<file_name>...'
+/awstrialbucket2/Hello.txt
+command :  aws s3 rm s3://awstrialbucket2/Hello.txt
+delete: s3://awstrialbucket2/Hello.txt
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+7
+Enter the bucket name:
+awstrialbucket2
+command :  aws s3 ls awstrialbucket2
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+2
+Enter bucket name:
+awstrialbucket2
+Enter region name:
+us-west-2
+command :  aws s3api delete-bucket --bucket awstrialbucket2 --region us-west-2
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+6
+command :  aws s3 ls
+2016-03-24 17:18:59 aws_ss
+2016-03-18 15:48:20 awsexamtrial2
+2016-03-21 14:32:44 awspracticebucket
+2016-03-17 15:39:55 awss3examtrial
+2016-03-23 10:54:26 awss3trial4
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+7
+Enter the bucket name:
+awss3examtrial
+command :  aws s3 ls awss3examtrial
+2016-03-17 16:18:41       6177 drug-candidates.json
+2016-03-17 16:18:43      51096 finance.json
+2016-03-17 16:18:44      12068 phones.json
+2016-03-17 16:18:45       5042 treatments-selection.json
+2016-03-18 16:04:18        345 y.tab.h
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+3
+Enter File path: 'From s3 to local : eg. /<bucket_name>/<folder_name>/...'
+/awss3examtrial/phones.json
+Enter Destination path:
+.
+command :  aws s3 cp s3://awss3examtrial/phones.json .
+download: s3://awss3examtrial/phones.json to ./phones.json
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+6
+command :  aws s3 ls
+2016-03-24 17:18:59 aws_ss
+2016-03-18 15:48:20 awsexamtrial2
+2016-03-21 14:32:44 awspracticebucket
+2016-03-17 15:39:55 awss3examtrial
+2016-03-23 10:54:26 awss3trial4
+
+Menu
+1.Create Bucket
+2.Delete Bucket
+3.Download File
+4.Upload File 
+5.Delete File
+6.View Buckets
+7.View Bucket contents
+8.EXIT
+Enter your choice: 
+8
+Exited!
+
